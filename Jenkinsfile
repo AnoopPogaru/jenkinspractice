@@ -8,6 +8,9 @@ node('centos_mvn'){
     stage('package'){
         sh 'mvn package'
     }
+    stage('pwd'){
+        sh 'pwd'
+    }
     stage('archive'){
         archiveArtifacts '/springpetclinic/target/*.jar'
     }
