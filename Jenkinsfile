@@ -12,9 +12,9 @@ node('centos_mvn'){
         sh 'pwd'
     }
     stage('archive'){
-        archiveArtifacts '/springpetclinic/target/*.jar'
+        archiveArtifacts '/pipescm/target/*.jar'
     }
     stage('test reports'){
-        junit '/springpetclinic/target/surefire-reports/*.xml'
+        junit '/pipescm/target/surefire-reports/*.xml'
     }
 }
