@@ -9,9 +9,9 @@ node('centos_mvn'){
         sh 'mvn package'
     }
     stage('archive'){
-        archiveArtifacts '/home/jenkins/workspace/springpetclinic/target/*.jar'
+        archiveArtifacts '/springpetclinic/target/*.jar'
     }
     stage('test reports'){
-        junit '/home/jenkins/workspace/springpetclinic/target/surefire-reports/*.xml'
+        junit '/springpetclinic/target/surefire-reports/*.xml'
     }
 }
