@@ -23,4 +23,5 @@ node('centos_mvn'){
     }
     stage('moving artifacts'){
         sh 'cp -r workspace/test.first/target/*.jar ${BUILD_ID} '
+    }
 }
