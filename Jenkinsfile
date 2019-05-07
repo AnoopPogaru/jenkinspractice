@@ -22,6 +22,6 @@ node('centos_mvn'){
     }
     stage('moving artifacts'){
         sh 'cp  target/*.jar /home/jenkins/build${BUILD_ID}'
-        sh 'echo $BUILD_ID'
+        sh 'echo ${BUILD_ID}'
     }
 }
