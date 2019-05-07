@@ -1,6 +1,6 @@
 node('centos_mvn'){
     stage('cloning'){
-        git branch: 'dev', url: '$file_location'
+        git branch: 'dev', url: 'https://github.com/bhaskardegala/jenkinspractice.git'
     }
     stage('clean'){
         sh 'mvn clean'
