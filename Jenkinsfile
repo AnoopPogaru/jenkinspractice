@@ -24,6 +24,6 @@ node('centos_mvn'){
     }
     stage('moving artifacts'){
         sh 'cd ~'
-        sh 'cp  /home/jenkins/workspace/test.first/target/*.jar /home/jenkins/build${BUILD_ID} '
+        sh 'cp  workspace/test.first/target/*.jar build${BUILD_ID} '
     }
 }
