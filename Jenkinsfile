@@ -20,9 +20,10 @@ node('centos_mvn'){
     stage('creating specified build no folder'){
         sh 'cd ~'
         sh 'mkdir build${BUILD_ID}'
+        sh 'pwd'
     }
     stage('moving artifacts'){
         sh 'cd ~'
-        sh 'cp  workspace/test.first/target/*.jar ${BUILD_ID} '
+        sh 'cp  /home/jenkins/workspace/test.first/target/*.jar /home/jenkins/build${BUILD_ID} '
     }
 }
