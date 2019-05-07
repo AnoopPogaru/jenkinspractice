@@ -18,12 +18,10 @@ node('centos_mvn'){
         junit 'target/surefire-reports/*.xml'
     }
     stage('creating specified build no folder'){
-        sh 'cd ~'
-        sh 'mkdir build${BUILD_ID}'
-        sh 'pwd'
+        sh 'mkdir /home/jenkins/build${BUILD_ID}'
     }
     stage('moving artifacts'){
         sh 'cd ~'
-        sh 'cp  target/*.jar build${BUILD_ID} '
+        sh 'cp  target/*.jar /home/jenkins/build${BUILD_ID} '
     }
 }
