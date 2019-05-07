@@ -21,7 +21,6 @@ node('centos_mvn'){
         sh 'mkdir /home/jenkins/build${BUILD_ID}'
     }
     stage('moving artifacts'){
-        sh 'cd ~'
         sh 'cp  target/*.jar /home/jenkins/build${BUILD_ID} '
     }
 }
