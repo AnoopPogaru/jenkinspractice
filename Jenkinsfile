@@ -23,7 +23,6 @@ node('centos_mvn'){
     stage('moving artifacts'){
         sh 'cp  target/*.jar /home/jenkins/build${BUILD_ID}'
         sh 'echo ${BUILD_ID}'
-        sh 'pwd'
     }
     stage('SonarQube analysis'){
     // performing sonarqube analysis with "withSonarQubeENV(<Name of Server configured in Jenkins>)"
