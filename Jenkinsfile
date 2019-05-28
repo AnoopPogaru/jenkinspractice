@@ -25,5 +25,5 @@ node('test_ubuntu'){
         sh 'echo ${BUILD_ID}'
         sh 'pwd'
     }
-    }
+    
 }
