@@ -1,4 +1,4 @@
-node('tes_ubuntu'){
+node('test_ubuntu'){
     stage('cloning'){
         git branch: 'dev', url: 'https://github.com/bhaskardegala/jenkinspractice.git'
     }
