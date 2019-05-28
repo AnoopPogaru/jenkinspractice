@@ -1,4 +1,4 @@
-node('centos_mvn'){
+node('tes_ubuntu'){
     stage('cloning'){
         git branch: 'dev', url: 'https://github.com/bhaskardegala/jenkinspractice.git'
     }
